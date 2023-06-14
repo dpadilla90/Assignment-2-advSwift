@@ -49,15 +49,33 @@ func calculateArea(height: Int, width: Int) -> Int {
     return area
 }
 
-
-
-
 //Function # 2
 
 func allCap(string: String) -> String {
     let capitalizedString = string.uppercased()
     return capitalizedString
 }
+
+//Function # 3
+
+func middle(array: [Int]) -> Int? {
+    //Check if array is empty
+    if array.isEmpty {
+        return nil
+    }
+    else{
+        //calculate middle element by dividing array.count by 2
+        let middleIndex = array.count / 2
+        //check if the count of the array is even or odd
+        if array.count % 2 == 0 {
+            return nil
+        //return the middle index if its odd
+        } else {
+            return array[middleIndex]
+        }
+    }
+}
+
 
 // Main function used for testing functions
 func main() {
@@ -70,8 +88,22 @@ func main() {
     let originalString = "hello, world!"
     let convertedString = allCap(string: originalString)
     print(convertedString)
-
     
+    //Testing function #3
+    let array1 = [1, 2, 3, 4, 5, 6]
+    if let middleElement1 = middle(array: array1) {
+        print("The middle element is: \(middleElement1)")
+    } else {
+        print("There is no middle element.")
+    }
+
+    let array2 = [1, 2, 3, 4, 5]
+    if let middleElement2 = middle(array: array2) {
+        print("The middle element is: \(middleElement2)")
+    } else {
+        print("There is no middle element.")
+    }
+
     
 }
 
