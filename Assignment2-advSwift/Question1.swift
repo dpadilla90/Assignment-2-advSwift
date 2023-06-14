@@ -43,17 +43,37 @@ import Foundation
  ex: [1,2,3,4,5] has a middle of 3
  */
 
+//Function # 1 for calculating an area
 func calculateArea(height: Int, width: Int) -> Int {
     let area = height * width
     return area
 }
 
 
-func main() {
-    let areaOfSquare = calculateArea(height: 5, width: 5)
-    print("The area of the square is: \(areaOfSquare)")
+
+
+//Function # 2
+
+func allCap(string: String) -> String {
+    let capitalizedString = string.uppercased()
+    return capitalizedString
 }
 
+// Main function used for testing functions
+func main() {
+    
+    //Testing func # 1
+    let areaOfSquare = calculateArea(height: 5, width: 5)
+    print("The area of the square is: \(areaOfSquare)")
+    
+    //Testing func #2
+    let originalString = "hello, world!"
+    let convertedString = allCap(string: originalString)
+    print(convertedString)
+
+    
+    
+}
 
 
 
