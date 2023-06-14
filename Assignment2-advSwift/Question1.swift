@@ -42,3 +42,18 @@ import Foundation
  ex: [1,2,3,4,5,6] has no middle because 3,4 are both in the middle
  ex: [1,2,3,4,5] has a middle of 3
  */
+
+func calculateArea(height: Int, width: Int) -> Int {
+    let area = height * width
+    return area
+}
+
+
+func main() {
+    let areaOfSquare = calculateArea(height: 5, width: 5)
+    print("The area of the square is: \(areaOfSquare)")
+}
+
+
+
+
