@@ -38,3 +38,35 @@ import Foundation
  - override upgradeRam() => if the ram is not upgradable do nothing
  - closeScreen() => this will set the laptop state to 'Sleep'
  */
+
+
+class Computer {
+    var cpu: String
+    var gpu: String
+    var ram: Int
+    var state: String = "Off"
+    var temp: Double
+    
+    init(cpu: String, gpu: String, ram: Int, temp: Double) {
+        self.cpu = cpu
+        self.gpu = gpu
+        self.ram = ram
+        self.temp = temp
+    }
+    
+    func upgradeRam(newAmount: Int) {
+        ram = newAmount
+    }
+    
+    func turnOn() {
+        state = "On"
+    }
+    
+    func turnOff() {
+        state = "Off"
+    }
+    
+    func getTemp() -> Double {
+        return temp
+    }
+}
